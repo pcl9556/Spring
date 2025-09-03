@@ -58,3 +58,40 @@ Weaving: 실제 코드에 Aspect를 적용하는 과정
 보안 체크
 
 예외 처리
+
+AOP 관련 핵심 어노테이션
+1. @Aspect
+
+이 클래스가 **AOP의 Aspect(공통 기능 모듈)**임을 명시
+
+@Component 와 함께 써야 스프링 빈으로 등록
+
+2. @Pointcut
+
+공통 기능을 적용할 메소드를 패턴으로 지정
+
+다른 어드바이스(@Before, @After 등)에서 재사용 가능
+
+3. @Before
+
+대상 메소드 실행 전에 실행되는 어드바이스
+
+4. @AfterReturning
+
+대상 메소드가 정상적으로 실행된 후 실행
+
+returning 속성을 통해 리턴값을 받을 수 있음
+
+5. @AfterThrowing
+
+대상 메소드에서 예외가 발생했을 때 실행
+
+6. @After
+
+메소드 실행이 끝난 후 (정상 종료 + 예외 발생 모두 포함) 실행
+
+7. @Around
+
+메소드 실행 전/후 모두 제어 가능
+
+ProceedingJoinPoint 로 실제 메소드를 실행하고 결과를 반환해야 함
