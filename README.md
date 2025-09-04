@@ -60,6 +60,7 @@ Weaving: 실제 코드에 Aspect를 적용하는 과정
 예외 처리
 
 AOP 관련 핵심 어노테이션
+
 1. @Aspect
 
 이 클래스가 **AOP의 Aspect(공통 기능 모듈)**임을 명시
@@ -95,3 +96,39 @@ returning 속성을 통해 리턴값을 받을 수 있음
 메소드 실행 전/후 모두 제어 가능
 
 ProceedingJoinPoint 로 실제 메소드를 실행하고 결과를 반환해야 함
+
+총 정리
+
+@Aspect → 이 클래스가 Aspect임을 선언
+
+@Pointcut → 어떤 메소드에 적용할지 지정
+
+@Before → 실행 전
+
+@AfterReturning → 정상 종료 후
+
+@AfterThrowing → 예외 발생 시
+
+@After → 실행 후 (무조건)
+
+@Around → 전/후 모두 제어
+
+실행순서
+
+클라이언트 호출
+   ↓
+[AOP 프록시 진입]
+   ↓
+@Around (before 영역)
+   ↓
+@Before
+   ↓
+[실제 대상 메소드 실행]
+   ↓
+@AfterReturning
+   ↓
+@After
+   ↓
+@Around (after 영역)
+   ↓
+결과 반환
