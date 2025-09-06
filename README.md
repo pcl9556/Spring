@@ -13,6 +13,29 @@ spring-web / spring-webmvc : 웹 애플리케이션 개발 (MVC 패턴)
 spring-test : 단위 테스트, 통합 테스트 지원
 
 
+~ 흐름 ~
+
+DispatcherServlet
+
+모든 요청을 가장 먼저 받아서 → 어디로 보낼지 조정하는 중앙 관제탑 역할.
+
+HandlerMapping
+
+요청 URL과 매핑된 컨트롤러(메서드)를 찾아줌.
+
+Controller → Service → DAO → DB
+
+계층형 아키텍처: 컨트롤러는 로직을 몰라도 되고, 서비스는 DB 세부사항을 몰라도 됨.
+
+ViewResolver
+
+컨트롤러가 "list"라는 뷰 이름을 반환하면 → /WEB-INF/views/list.jsp 같은 실제 파일로 변환.
+
+View
+
+HTML, JSP, Thymeleaf 같은 최종 화면이 클라이언트에 전달됨.
+
+
 
 # Spring - (core)
 1. IoC (Inversion of Control, 제어의 역전)
