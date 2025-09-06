@@ -1,3 +1,19 @@
+# Spring Framework
+
+spring-core : 스프링의 핵심 기능 (IoC/DI 컨테이너)
+
+spring-context : 애플리케이션 컨텍스트, 빈(Bean) 관리
+
+spring-aop : 관점 지향 프로그래밍
+
+spring-jdbc / spring-tx : 데이터베이스 접근과 트랜잭션 처리
+
+spring-web / spring-webmvc : 웹 애플리케이션 개발 (MVC 패턴)
+
+spring-test : 단위 테스트, 통합 테스트 지원
+
+
+
 # Spring - (core)
 1. IoC (Inversion of Control, 제어의 역전)
 
