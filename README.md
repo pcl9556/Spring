@@ -165,6 +165,18 @@ ProceedingJoinPoint 로 실제 메소드를 실행하고 결과를 반환해야 
 [실제 대상 메소드 실행]
    ↓
 @AfterReturning
+
+#Spring MVC
+Spring Web MVC - Controller, Service, DAO 계층으로 구성된 MVC 패턴
+
+@RequestMapping
+Spring Web MVC에서 요청(Request)을 처리하는 데 사용되는 어노테이션임.
+
+클래스 레벨이나 메소드 레벨에서 사용
+
+
+
+
    ↓
 @After
    ↓
