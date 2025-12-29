@@ -169,6 +169,18 @@ ProceedingJoinPoint 로 실제 메소드를 실행하고 결과를 반환해야 
 # Spring MVC
 Spring Web MVC - Controller, Service, DAO 계층으로 구성된 MVC 패턴
 
+요청 →
+Controller →
+Service →
+Model →
+View →
+응답
+
+Spring MVC는 요청을 처리하는 Controller,
+비즈니스 로직을 담당하는 Service,
+결과를 화면으로 보여주는 View를 분리한 구조.
+역할 분리로 유지보수와 확장성이 좋아진다.
+
 @RequestMapping
 Spring Web MVC에서 요청(Request)을 처리하는 데 사용되는 어노테이션임.
 
