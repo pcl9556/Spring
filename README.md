@@ -223,3 +223,12 @@ Spring Web MVC에서 요청(Request)을 처리하는 데 사용되는 어노테�
 - Step은 Tasklet 처리 방식과 Chunk 지향 처리 방식을 지원함
 - Tasklet은 하나의 메서드로 구성 되어있는 간단한 인터페이스임. 이 메서드 는 실패를 알리기 위해 예외를 반환 하거나 throw할 때까지 execute를 반복적으로 호출함.
 - Chunk는 처리 되는 커밋 row 수를 의미함. Transaction을 수행하기 때문에 실패시 Chunk 단위 만큼 rollback됨
+
+읽기(Read) — Database에서 배치처리를 할 Data를 읽어온다
+처리(Processing) — 읽어온 Data를 가공,처리를 한다 (필수사항X)
+쓰기(Write) — 가공,처리한 데이터를 Database에 저장한다.
+
+Spring Meta Table
+Spring Batch에는 6개의 Meta Table과 3개의 Sequence Table이 존재함. 이는 Spring BatchJob이 실행 될 때마다 실행된 Job에 대한 다양한 정보들이 저장된다.
+
+일반적으로는 해당 Meta Table이 없이는 Spring Batch Framework를 실행시킬 수 없으나 이는 필요에 따라 커스터마이징을 통해 Meta Table이 없이도 실행되게 만들 수 있다.
