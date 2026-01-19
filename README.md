@@ -232,3 +232,7 @@ Spring Meta Table
 Spring Batch에는 6개의 Meta Table과 3개의 Sequence Table이 존재함. 이는 Spring BatchJob이 실행 될 때마다 실행된 Job에 대한 다양한 정보들이 저장된다.
 
 일반적으로는 해당 Meta Table이 없이는 Spring Batch Framework를 실행시킬 수 없으나 이는 필요에 따라 커스터마이징을 통해 Meta Table이 없이도 실행되게 만들 수 있다.
+
+Spring Batch에는 다양한 ItemReader와 ItemWriter가 존재한다. 
+대용량 배치 처리를 하게 되면 Item을 읽어 올 때 Paging 처리를 하는게 효과적! 
+Spring Batch Reader에서는 이러한 Paging 처리를 지원한다. 또한 적절한 Paging처리와 Chunk Size(한번에 처리 될 트랜잭션)를 설정하여 더욱 효과적인 배치 처리를 할 수 있다.
