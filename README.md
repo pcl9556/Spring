@@ -236,3 +236,13 @@ Spring Batch에는 6개의 Meta Table과 3개의 Sequence Table이 존재함. �
 Spring Batch에는 다양한 ItemReader와 ItemWriter가 존재한다. 
 대용량 배치 처리를 하게 되면 Item을 읽어 올 때 Paging 처리를 하는게 효과적! 
 Spring Batch Reader에서는 이러한 Paging 처리를 지원한다. 또한 적절한 Paging처리와 Chunk Size(한번에 처리 될 트랜잭션)를 설정하여 더욱 효과적인 배치 처리를 할 수 있다.
+
+# Spring AI
+AI Engineering을 위한 애플리케이션 프레임워크. 
+공식문서에 의하면 해당 프레임워크의 핵심은 기업 데이터와 API를 AI 모델과 연결하는 AI 통합임
+
+1. Function Calling
+- Function Calling은 LLM(Large Language Model)을 API에 연결하여 데이터 처리 작업을 모델 대신 수행함
+- 여기서 Spring AI의 역할은 AI Model의 요청 정보를 바탕으로 Function Registry에서 찾아 Function으로 전달하고 결과를 가공하여 최종 응답을 생성함.
+2. Chat Client API
+- 해당 API를 통해 AI Model과 통신함.
