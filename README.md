@@ -238,8 +238,15 @@ Spring Batch에는 다양한 ItemReader와 ItemWriter가 존재한다.
 Spring Batch Reader에서는 이러한 Paging 처리를 지원한다. 또한 적절한 Paging처리와 Chunk Size(한번에 처리 될 트랜잭션)를 설정하여 더욱 효과적인 배치 처리를 할 수 있다.
 
 # Spring AI
+👉 Spring 개발 방식 그대로
+👉 AI 모델(LLM)과 편하게 연결해서
+👉 생성형 AI 기능(챗봇, 요약, 임베딩, 이미지/음성 처리 등)을 직관적인 코드로 사용할 수 있게 해주는 프레임워크
 AI Engineering을 위한 애플리케이션 프레임워크. 
 공식문서에 의하면 해당 프레임워크의 핵심은 기업 데이터와 API를 AI 모델과 연결하는 AI 통합임
+다양한 AI 제공자 지원
+일관된 AI API 제공
+구조화된 출력
+추론-확장 기능 (RAG, Vector DB)
 
 1. Function Calling
 - Function Calling은 LLM(Large Language Model)을 API에 연결하여 데이터 처리 작업을 모델 대신 수행함
