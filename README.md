@@ -248,6 +248,18 @@ AI Engineering을 위한 애플리케이션 프레임워크.
 구조화된 출력
 추론-확장 기능 (RAG, Vector DB)
 
+AI 애플리케이션의 중심에는 AI Agent 역할을 수행하는 REST API 기반의 Back-End가 있다.
+Front-End(Web App, Mobile App)와 상호 작용하면서 멀티모달 AI 모델을 이용해서 판단, 추론하며, 도구를 통한 행동(조치) 작업을 수행한다. 
+또한 사용자와의 대화 기억을 유지하고, 행동 조치 내용을 기록함
+
+Front-End는 AI 모델에 전달할 입력 데이터를 생성하거나, AI 모델의 출력 결과를 사용자에게 보여주는 역할을 한다.
+입력 데이터는 텍스트, 이미지 파일, 카메라 영상 등 다양한 형태임
+입력 데이터는 Back-End에서 가공 및 보강 과정을 거친 뒤, 이를 AI 모델 입력값으로 전달한다. 흔히 이것을 프롬프트prompt라고 부름.
+
+AI 모델은 온프레미스 환경에서 실행될 수도 있고, 클라우드에서 실행
+AI 모델이 어디서 실행되든 사용하는 방식은 동일함.
+Back-End는 REST API를 통해 입력 데이터를 담아 AI 모델로 요청을 보내고, AI 모델로부터 응답을 받아 Front-End에 전달함.
+
 1. Function Calling
 - Function Calling은 LLM(Large Language Model)을 API에 연결하여 데이터 처리 작업을 모델 대신 수행함
 - 여기서 Spring AI의 역할은 AI Model의 요청 정보를 바탕으로 Function Registry에서 찾아 Function으로 전달하고 결과를 가공하여 최종 응답을 생성함.
